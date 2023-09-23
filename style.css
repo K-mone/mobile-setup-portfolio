@@ -1,0 +1,225 @@
+@media (min-width: 375px) {
+  .grid-container {
+    display: grid;
+    padding: 120px 0px;
+    align-items: center;
+    gap: 80px;
+  }
+
+  header {
+    color: #1c1a19;
+    font-family: Crete Round;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .feature {
+    display: flex;
+    padding: 0px 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .img {
+    width: 327px;
+    height: 237px;
+  }
+
+  h4 {
+    color: #091e42;
+    font-family: Crete Round;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 44px;
+  }
+
+  p {
+    color: #091e42;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .tags ul {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .tags li {
+    color: #091e42;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    border: 1px solid #8993a4;
+    background: #fff;
+    display: flex;
+    padding: 10px 12px;
+    align-items: center;
+  }
+
+  button {
+    display: flex;
+    padding: 12px;
+    border: none;
+    align-items: center;
+    gap: 10px;
+    background: #ff6b00;
+    color: #fff;
+    text-align: center;
+    font-family: Inter;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.51px;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  .card-wrapper {
+    width: 327px;
+    height: 386px;
+    display: flex;
+    padding: 0px 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .card {
+    display: inline-flex;
+    padding: 8px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(38, 38, 38, 0) 0.75%,
+        rgba(38, 38, 38, 0.9) 61.94%
+      ),
+      url("photos/background.png"), lightgray 50% / cover no-repeat;
+  }
+
+  .card h4 {
+    width: 295px;
+    height: 81px;
+    color: #fff;
+    font-family: Crete Round;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 44px;
+  }
+
+  .card p {
+    color: #fff;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    width: 301px;
+    height: 99px;
+  }
+
+  .action {
+    width: 327px;
+    height: 48px;
+    flex-shrink: 0;
+    background: #ff6b00;
+  }
+
+  .full-button {
+    display: inline-flex;
+    padding: 12px;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .about-me {
+    display: flex;
+    padding: 120px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    background: #1c1a19;
+  }
+  .about-me h1 {
+    color: #ff6b00;
+    font-family: Crete Round;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 88px;
+    letter-spacing: 0.37px;
+  }
+
+  .about-me p {
+    color: #f4f5f7;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .skills {
+    display: inline-flex;
+    padding: 120px 24px 38px 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .skills ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .ability {
+    text-align: center;
+    color: #fff;
+    font-family: Crete Round;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 44px;
+  }
+
+  .language {
+    color: #fff;
+    text-align: center;
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42.667px;
+  }
+
+  .skills li {
+    list-style: none;
+    display: flex;
+    padding: 0px 12px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+}
