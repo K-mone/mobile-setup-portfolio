@@ -1,14 +1,19 @@
+:root {
+  --primary-font-family: "Crete Round", serif;
+  --secondary-font-family: "Inter", sans-serif;
+}
+
 @media (min-width: 375px) {
   .grid-container {
     display: grid;
-    padding: 120px 0px;
+    padding: 120px 0;
     align-items: center;
     gap: 80px;
   }
 
   header {
     color: #1c1a19;
-    font-family: Crete Round;
+    font-family: var(--primary-font-family);
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
@@ -21,7 +26,7 @@
 
   .feature {
     display: flex;
-    padding: 0px 24px;
+    padding: 0 24px;
     flex-direction: column;
     align-items: center;
     gap: 24px;
@@ -34,7 +39,7 @@
 
   h4 {
     color: #091e42;
-    font-family: Crete Round;
+    font-family: var(--primary-font-family);
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
@@ -43,7 +48,7 @@
 
   p {
     color: #091e42;
-    font-family: Inter;
+    font-family: var(--secondary-font-family);
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -58,7 +63,7 @@
 
   .tags li {
     color: #091e42;
-    font-family: Inter;
+    font-family: var(--secondary-font-family);
     font-size: 15px;
     font-style: normal;
     font-weight: 500;
@@ -80,7 +85,7 @@
     background: #ff6b00;
     color: #fff;
     text-align: center;
-    font-family: Inter;
+    font-family: var(--secondary-font-family);
     font-size: 17px;
     font-style: normal;
     font-weight: 700;
@@ -96,7 +101,7 @@
     width: 327px;
     height: 386px;
     display: flex;
-    padding: 0px 24px;
+    padding: 0 24px;
     flex-direction: column;
     align-items: center;
     gap: 24px;
@@ -108,19 +113,15 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
-    background: linear-gradient(
-        180deg,
-        rgba(38, 38, 38, 0) 0.75%,
-        rgba(38, 38, 38, 0.9) 61.94%
-      ),
-      url("photos/background.png"), lightgray 50% / cover no-repeat;
+    background-image: url("photos/background.png");
+    background-repeat: no-repeat;
   }
 
   .card h4 {
     width: 295px;
     height: 81px;
     color: #fff;
-    font-family: Crete Round;
+    font-family: var(--primary-font-family);
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
@@ -129,7 +130,7 @@
 
   .card p {
     color: #fff;
-    font-family: Inter;
+    font-family: var(--secondary-font-family);
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -160,9 +161,10 @@
     gap: 24px;
     background: #1c1a19;
   }
+
   .about-me h1 {
     color: #ff6b00;
-    font-family: Crete Round;
+    font-family: var(--primary-font-family);
     font-size: 72px;
     font-style: normal;
     font-weight: 400;
@@ -172,7 +174,7 @@
 
   .about-me p {
     color: #f4f5f7;
-    font-family: Inter;
+    font-family: var(--secondary-font-family);
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -197,7 +199,7 @@
   .ability {
     text-align: center;
     color: #fff;
-    font-family: Crete Round;
+    font-family: var(--primary-font-family);
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -207,7 +209,7 @@
   .language {
     color: #fff;
     text-align: center;
-    font-family: Inter;
+    font-family: var(--secondary-font-family);
     font-size: 22px;
     font-style: normal;
     font-weight: 400;
@@ -217,7 +219,7 @@
   .skills li {
     list-style: none;
     display: flex;
-    padding: 0px 12px;
+    padding: 0 12px;
     flex-direction: column;
     align-items: center;
     gap: 8px;
