@@ -1,54 +1,29 @@
-# My Works and Skills
 
-## Table of Contents
+# My Portfolio
 
-- [Introduction](#introduction)
-- [My Works](#my-works)
-- [My Skills](#my-skills)
-- [Contact Information](#contact-information)
+Welcome to my portfolio! I'm Kyae Mone Win, a front-end developer based in Myanmar. Here, you'll find a collection of my projects and skills.
 
-## Introduction
+## About Me
 
-Welcome to my README file, where I provide an overview of my professional background and expertise.
-
-## My Works
-
-### Project 1: [SheCodes Portfolio]
-
-- **Description:** This is a portfolio project as SheCodes student
-- **Role:** developer
-- **Technologies Used:** HTML, CSS, Bootstrap
-
-### Project 2: [Weather App]
-
-- **Description:** This is weather app project
-- **Role:** developer
-- **Technologies Used:** HTML, CSS, JavaScript, API KEY
-
-## My Skills
-
-Below is a list of my skills and areas of expertise:
-
-### Technical Skills
-
-- **Programming Languages:** JavaScript, React
-- **Web Development:** HTML and CSS
-
-### Soft Skills
-
-- **Communication**
-- **Problem Solving**
-- **Adaptability**
-- **Leadership**
-- **Project Management**
-- **Time Management**
-
-## Contact Information
-
-If you would like to get in touch with me, please feel free to reach out via the following channels:
-
+- **Name:** Kyae Mone Win
+- **Location:** Mandalay, Myanmar
 - **Email:** kmw2547@gmail.com
-- **LinkedIn:** https://www.linkedin.com/in/kyayemone-win-2bb151217/
-- **GitHub:** https://github.com/K-mone
+- **GitHub:** K-mone (https://github.com/K-mone)
 
-Thank you for taking the time to review my works and skills. I look forward to potential collaborations and opportunities in the future.
+## Skills
+
+- **Web Development:** HTML, CSS, JavaScript, React, etc.
+- **Database:** MySQL
+- **Tools:** Git, GitHub, Figma, etc.
+
+## Education
+
+- **Degree in BA.German - University of Foreign Languages,Mandalay (2018)**
+- SheCodes
+
+## Contact
+
+Feel free to reach out to me at kmw2547@gmail.com or connect with me on [LinkedIn](https://www.linkedin.com/in/your-profile/kyayemone-win-2bb151217).
+
+Thank you for visiting!
+ 
