@@ -1,9 +1,73 @@
 :root {
+  --default-background-color: #1c1a19;
+  --default-font-color: #ff6b00;
+  --primary-font-color: #fff5e1;
+  --secondary-font-color: #fff;
+  --default-font-family: "Poppins", sans-serif;
   --primary-font-family: "Crete Round", serif;
+  --secondary-font-family: "Roboto", sans-serif;
   --third-font-family: "Inter", sans-serif;
 }
 
 @media (min-width: 375px) {
+  p {
+    color: #091e42;
+    font-family: var(--third-font-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .about-me {
+    background: var(--default-background-color);
+    padding: 120px 24px;
+  }
+
+  .about-me h1 {
+    color: var(--default-font-color);
+    font-family: var(--primary-font-family);
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 64px;
+    letter-spacing: 0.37px;
+  }
+
+  .about-me h3 {
+    color: var(--primary-font-color);
+    font-family: var(--secondary-font-family);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+  }
+
+  .about-me p {
+    color: var(--secondary-font-color);
+    font-family: var(--default-font-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .social-links {
+    padding: 8px;
+  }
+
+  .social-links a {
+    color: #dbd8d7;
+    width: 35px;
+    height: 35px;
+    padding: 2px 3px;
+    border-radius: 8px;
+  }
+
+  .social-links a:hover {
+    color: var(--default-font-color);
+  }
+
   .grid-container {
     display: grid;
     padding: 120px 0;
@@ -12,7 +76,7 @@
   }
 
   header {
-    color: #1c1a19;
+    color: var(--default-background-color);
     font-family: var(--primary-font-family);
     font-size: 40px;
     font-style: normal;
@@ -46,15 +110,6 @@
     line-height: 44px;
   }
 
-  p {
-    color: #091e42;
-    font-family: var(--third-font-family);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-  }
-
   .tags ul {
     display: flex;
     align-items: center;
@@ -70,7 +125,7 @@
     line-height: 20px;
     list-style: none;
     border: 1px solid #8993a4;
-    background: #fff;
+    background: var(--secondary-font-color);
     display: flex;
     padding: 10px 12px;
     align-items: center;
@@ -82,8 +137,8 @@
     border: none;
     align-items: center;
     gap: 10px;
-    background: #ff6b00;
-    color: #fff;
+    background: var(--default-font-color);
+    color: var(--secondary-font-color);
     text-align: center;
     font-family: var(--third-font-family);
     font-size: 17px;
@@ -98,8 +153,6 @@
   }
 
   .card-wrapper {
-    width: 327px;
-    height: 386px;
     display: flex;
     padding: 0 24px;
     flex-direction: column;
@@ -129,7 +182,7 @@
   }
 
   .card p {
-    color: #fff;
+    color: var(--secondary-font-color);
     font-family: var(--third-font-family);
     font-size: 16px;
     font-style: normal;
@@ -143,7 +196,7 @@
     width: 327px;
     height: 48px;
     flex-shrink: 0;
-    background: #ff6b00;
+    background: var(--default-font-color);
   }
 
   .full-button {
@@ -159,11 +212,11 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
-    background: #1c1a19;
+    background: var(--default-background-color);
   }
 
-  .about-me h1 {
-    color: #ff6b00;
+  .about-myself h1 {
+    color: var(--default-font-color);
     font-family: var(--primary-font-family);
     font-size: 72px;
     font-style: normal;
@@ -172,7 +225,7 @@
     letter-spacing: 0.37px;
   }
 
-  .about-me p {
+  .about-myself p {
     color: #f4f5f7;
     font-family: var(--third-font-family);
     font-size: 16px;
@@ -198,7 +251,7 @@
 
   .ability {
     text-align: center;
-    color: #fff;
+    color: var(--secondary-font-color);
     font-family: var(--primary-font-family);
     font-size: 32px;
     font-style: normal;
@@ -207,7 +260,7 @@
   }
 
   .language {
-    color: #fff;
+    color: var(--secondary-font-color);
     text-align: center;
     font-family: var(--third-font-family);
     font-size: 22px;
