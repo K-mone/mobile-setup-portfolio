@@ -1,10 +1,103 @@
 :root {
   --primary-font-family: "Crete Round", serif;
   --secondary-font-family: "Inter", sans-serif;
+  --branding-color: #ff6b00;
+  --primary-color: #fff5e1;
+  --secondary-color: #fff;
+  --heading-font-family: "Crete Round", serif;
+  --default-font-family: "Poppins", sans-serif;
+  --secondary-font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #1c1a19;
 }
 
 @media (min-width: 375px) {
-  .grid-container {
+  h1 {
+    color: var(--branding-color);
+    font-family: var(--heading-font-family);
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 64px;
+    letter-spacing: 0.37px;
+  }
+
+  h3 {
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    font-family: var(--secondary-font-family);
+  }
+
+  p {
+    color: var(--secondary-color);
+    font-family: var(--default-font-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 8px;
+  }
+
+  nav {
+    height: 48px;
+    padding: 2px 24px 2px 12px;
+  }
+
+  nav ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  nav li {
+    list-style: none;
+    line-height: 42px;
+    margin-left: 15px;
+  }
+
+  .navbar-brand {
+    color: var(--secondary-color);
+    text-align: center;
+    font-family: var(--secondary-font-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: all 100ms ease-in-out;
+  }
+
+  nav a:hover {
+    color: var(--branding-color);
+  }
+
+  footer {
+    margin: 60px 0;
+  }
+
+  footer .social-links a {
+    margin: 0 20px;
+    color: var(--primary-color);
+    padding: 10px 14px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: all 100ms ease-in-out;
+  }
+
+  footer .social-links a:hover {
+    color: var(--secondary-color);
+    background-color: var(--branding-color);
+  }
+
+  .about-me {
+    padding: 120px 24px;
+  }
+   .grid-container {
     display: grid;
     padding: 120px 0;
     align-items: center;
@@ -223,5 +316,5 @@
     flex-direction: column;
     align-items: center;
     gap: 8px;
-  }
+}
 }
