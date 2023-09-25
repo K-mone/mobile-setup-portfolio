@@ -20,8 +20,12 @@
   }
 
   .about-me {
-    background: var(--default-background-color);
+    display: flex;
     padding: 120px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    background: var(--default-background-color);
   }
 
   .about-me h1 {
@@ -50,22 +54,27 @@
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
+    width: 327px;
+    height: 123px;
   }
 
   .social-links {
-    padding: 8px;
+    display: flex;
+    align-items: center;
   }
 
   .social-links a {
     color: #dbd8d7;
-    width: 35px;
-    height: 35px;
-    padding: 2px 3px;
+    padding: 8px;
     border-radius: 8px;
+    width: 45px;
+    height: 45px;
   }
 
   .social-links a:hover {
     color: var(--default-font-color);
+    transition: 150ms ease-in-out;
+    cursor: pointer;
   }
 
   .grid-container {
@@ -90,15 +99,61 @@
 
   .feature {
     display: flex;
-    padding: 0 24px;
+    padding: 12px;
     flex-direction: column;
     align-items: center;
     gap: 24px;
   }
 
+  .work-story {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  button {
+    display: flex;
+    padding: 12px;
+    border: none;
+    align-items: center;
+    gap: 10px;
+    background: var(--default-font-color);
+    color: var(--secondary-font-color);
+    text-align: center;
+    font-family: var(--third-font-family);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.51px;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  .card button {
+    display: inline-flex;
+    padding: 12px;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .work-story button {
+    cursor: pointer;
+    transition: 150ms ease-in-out;
+  }
+
+  .work-story button:hover {
+    background: #dbd8d7;
+    color: #ff6b00;
+  }
+
   .img {
-    width: 327px;
-    height: 237px;
+    width: 100%;
+    height: 100%;
   }
 
   h4 {
@@ -131,30 +186,8 @@
     align-items: center;
   }
 
-  button {
+  .card-divider {
     display: flex;
-    padding: 12px;
-    border: none;
-    align-items: center;
-    gap: 10px;
-    background: var(--default-font-color);
-    color: var(--secondary-font-color);
-    text-align: center;
-    font-family: var(--third-font-family);
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: 0.51px;
-  }
-
-  button:hover {
-    cursor: pointer;
-  }
-
-  .card-wrapper {
-    display: flex;
-    padding: 0 24px;
     flex-direction: column;
     align-items: center;
     gap: 24px;
@@ -193,17 +226,16 @@
   }
 
   .action {
-    width: 327px;
+    width: 100%;
     height: 48px;
-    flex-shrink: 0;
     background: var(--default-font-color);
   }
 
-  .full-button {
-    display: inline-flex;
-    padding: 12px;
-    align-items: center;
-    gap: 10px;
+  .full-button:hover {
+    cursor: pointer;
+    background-color: #f4f5f7;
+    color: #ff6b00;
+    transition: 150ms ease-in-out;
   }
 
   .about-myself {
@@ -235,31 +267,24 @@
   }
 
   .skills {
-    display: inline-flex;
+    display: flex;
     padding: 120px 24px 38px 24px;
     flex-direction: column;
     align-items: center;
     gap: 24px;
   }
 
-  .skills ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-  }
-
-  .ability {
+  .ability h4 {
     text-align: center;
     color: var(--secondary-font-color);
-    font-family: var(--primary-font-family);
+    font-family: var(--default-font-family);
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
     line-height: 44px;
   }
 
-  .language {
+  .ability ul {
     color: var(--secondary-font-color);
     text-align: center;
     font-family: var(--third-font-family);
@@ -267,14 +292,128 @@
     font-style: normal;
     font-weight: 400;
     line-height: 42.667px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
   }
 
-  .skills li {
+  .ability li {
     list-style: none;
+  }
+}
+
+@media (min-width: 768px) {
+  nav a {
+    color: var(--secondary-font-color);
+    text-align: center;
+    font-family: var(--third-font-family);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    text-decoration: none;
+  }
+
+  .collapse a {
+    padding: 10px 12px;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .about-me {
+    display: flex;
+    padding: 192px 143px;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .grid-container {
+    display: grid;
+    padding: 130px 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 114px;
+  }
+
+  .feature {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px;
+    width: 75%;
+  }
+
+  .work-story {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-divider {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0%;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .about-myself {
+    display: inline-flex;
+    padding: 130px 142px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .about-myself button:hover {
+    background: #dbd8d7;
+    color: #ff6b00;
+    cursor: pointer;
+  }
+
+  .skills {
+    display: inline-flex;
+    padding: 130px 0;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 152px;
+  }
+
+  .ability {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .ability ul {
     display: flex;
     padding: 0 12px;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
   }
 }
