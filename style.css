@@ -54,21 +54,19 @@
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
-    width: 327px;
-    height: 123px;
+    margin-bottom: 0;
   }
 
   .social-links {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    padding: 8px;
   }
 
   .social-links a {
     color: #dbd8d7;
-    padding: 8px;
-    border-radius: 8px;
-    width: 45px;
-    height: 45px;
+    width: 28px;
+    height: 28px;
   }
 
   .social-links a:hover {
@@ -321,6 +319,23 @@
     gap: 10px;
   }
 
+  .left-content {
+    width: 50%;
+  }
+
+  p {
+    position: absolute;
+    left: auto;
+    width: 80%;
+  }
+
+  footer {
+    position: absolute;
+    left: -76px;
+    width: 20%;
+    margin-top: 48px;
+  }
+
   .social-links {
     display: flex;
     align-items: center;
@@ -330,6 +345,7 @@
 
   .about-me {
     display: flex;
+    position: relative;
     padding: 192px 143px;
     flex-direction: column;
     gap: 24px;
