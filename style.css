@@ -70,6 +70,12 @@ body {
     transition: all 100ms ease-in-out;
   }
 
+  .social-links a {
+    color: var(--primary-color);
+    transition: all 100ms ease-in-out;
+    padding: 8px;
+  }
+
   nav a:hover {
     color: var(--branding-color);
   }
@@ -85,12 +91,6 @@ body {
   .social-links {
     display: flex;
     align-items: flex-start;
-  }
-
-  .social-links a {
-    color: var(--primary-color);
-    transition: all 100ms ease-in-out;
-    padding: 8px;
   }
 
   .social-links a:hover {
