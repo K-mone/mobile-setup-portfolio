@@ -12,6 +12,12 @@ body {
 }
 
 @media (min-width: 375px) {
+  section {
+    background-image: url(photos/background-illustration.svg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+  }
+
   h1 {
     color: var(--branding-color);
     font-family: var(--heading-font-family);
@@ -78,6 +84,7 @@ body {
 
   nav a:hover {
     color: var(--branding-color);
+    background-color: var(--primary-color);
   }
 
   .about-me {
