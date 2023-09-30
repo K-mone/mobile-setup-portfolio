@@ -326,6 +326,10 @@
   .left-content p {
     left: auto;
     width: 80%;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
   }
 
   footer {
@@ -400,10 +404,14 @@
   }
 
   .about-myself {
-    display: inline-flex;
+    background-image: url(photos/illustration-about-myself.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    display: flex;
+    position: relative;
     padding: 130px 142px;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: left;
     gap: 24px;
   }
 
