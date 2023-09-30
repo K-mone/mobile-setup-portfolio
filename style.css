@@ -16,8 +16,8 @@
     background-position: right bottom;
     background-color: #1c1a19;
   }
-  
-    .about-me {
+
+  .about-me {
     display: flex;
     padding: 120px 24px;
     flex-direction: column;
@@ -25,7 +25,7 @@
     gap: 12px;
     background: var(--default-background-color);
   }
- 
+
   .about-me h1 {
     color: var(--default-font-color);
     font-family: var(--primary-font-family);
@@ -135,6 +135,7 @@
     align-items: center;
     gap: 10px;
     width: 100%;
+    justify-content: center;
   }
 
   .work-story button {
@@ -163,7 +164,7 @@
 
   .tags ul {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 12px;
   }
 
@@ -179,7 +180,7 @@
     background: var(--secondary-font-color);
     display: flex;
     padding: 10px 12px;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .card-wrapper {
@@ -230,6 +231,20 @@
     height: 99px;
   }
 
+  .card .tags ul {
+    padding: 0;
+  }
+
+  .card .tags li {
+    background: rgba(255, 255, 255, 0.24);
+    color: var(--secondary-font-color);
+    font-family: var(--third-font-family);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
   .action {
     width: 100%;
     height: 48px;
@@ -253,7 +268,18 @@
     background-image: url(photos/illustration-about-myself-mobile.svg);
     background-repeat: no-repeat;
     background-position-x: right;
-    background-position-y: 25%;
+    background-position-y: 20%;
+  }
+
+  .left-content {
+    margin-bottom: 100px;
+  }
+
+  .left-content img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
   }
 
   .about-myself h1 {
@@ -277,6 +303,7 @@
 
   .skills {
     display: flex;
+    font-family: var(--third-font-family);
     padding: 120px 24px 38px 24px;
     flex-direction: column;
     align-items: center;
@@ -314,7 +341,7 @@
 
 @media (min-width: 768px) {
   nav a {
-    color: var(--secondary-font-color);
+    color: var(--primary-font-color);
     text-align: center;
     font-family: var(--third-font-family);
     font-size: 15px;
@@ -328,7 +355,7 @@
     padding: 10px 12px;
     align-items: center;
     gap: 10px;
-    color: var(--secondary-color);
+    color: var(--secondary-font-color);
   }
 
   .left-content {
@@ -352,20 +379,16 @@
   }
 
   .social-links {
+    color: var(--primary-font-color);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-  }
-
-  .social-links a {
-    color: var(--primary-color);
-    transition: all 100ms ease-in-out;
     padding: 8px;
   }
 
   nav a:hover {
-    color: var(--branding-color);
+    color: var(--default-font-color);
     background-color: var(--primary-color);
   }
 
@@ -373,7 +396,7 @@
     color: var(--secondary-color);
     background-color: var(--branding-color);
   }
-  
+
   .about-me {
     background-image: url(photos/Illustration-header.svg);
     background-repeat: no-repeat;
@@ -398,7 +421,7 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: left;
     gap: 24px;
     width: 75%;
   }
@@ -407,8 +430,16 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: left;
     gap: 24px;
+  }
+
+  .tags ul {
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    padding: 0;
+    gap: 12px;
   }
 
   img {
@@ -440,6 +471,57 @@
     align-items: flex-start;
   }
 
+  .card .tags li {
+    background: rgba(255, 255, 255, 0.24);
+    color: var(--secondary-font-color);
+    font-family: var(--third-font-family);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  button {
+    display: flex;
+    padding: 12px;
+    border: none;
+    align-items: center;
+    gap: 10px;
+    background: var(--default-font-color);
+    color: var(--secondary-font-color);
+    text-align: center;
+    font-family: var(--third-font-family);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.51px;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  .card button {
+    display: inline-flex;
+    padding: 12px;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .work-story button {
+    cursor: pointer;
+    transition: 150ms ease-in-out;
+  }
+
+  .work-story button:hover {
+    background: #dbd8d7;
+    color: #ff6b00;
+    cursor: pointer;
+  }
+
   .about-myself {
     background-image: url(photos/illustration-about-myself.svg);
     background-repeat: no-repeat;
@@ -452,14 +534,16 @@
     gap: 24px;
   }
 
-  .about-myself button:hover {
-    background: #dbd8d7;
-    color: #ff6b00;
-    cursor: pointer;
+  .left-content img {
+    position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .skills {
     display: inline-flex;
+    font-family: var(--third-font-family);
     padding: 130px 0;
     flex-direction: row;
     align-items: flex-start;
