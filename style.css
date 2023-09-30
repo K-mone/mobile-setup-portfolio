@@ -319,12 +319,18 @@
     gap: 10px;
   }
 
+  .about-me {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 24px;
+  }
+
   .left-content {
     width: 50%;
   }
 
-  p {
-    position: absolute;
+  .left-content p {
     left: auto;
     width: 80%;
   }
@@ -344,6 +350,9 @@
   }
 
   .about-me {
+    background-image: url(photos/Illustration-header.svg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
     display: flex;
     position: relative;
     padding: 192px 143px;
