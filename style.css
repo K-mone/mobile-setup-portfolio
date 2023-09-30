@@ -7,11 +7,14 @@
   --secondary-font-family: "Roboto", sans-serif;
 }
 
-body {
-  background: #1c1a19;
-}
-
 @media (min-width: 375px) {
+  section {
+    background-image: url(photos/background-illustration.svg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-color: #1c1a19;
+  }
+
   h1 {
     color: var(--branding-color);
     font-family: var(--heading-font-family);
@@ -35,7 +38,7 @@ body {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    margin-top: 8px;
+    margin-bottom: 0;
   }
 
   nav {
@@ -70,29 +73,91 @@ body {
     transition: all 100ms ease-in-out;
   }
 
+  .social-links a {
+    color: var(--primary-color);
+    transition: all 100ms ease-in-out;
+    padding: 8px;
+  }
+
   nav a:hover {
     color: var(--branding-color);
-  }
-
-  footer {
-    margin: 60px 0;
-  }
-
-  footer .social-links a {
-    margin: 0 20px;
-    color: var(--primary-color);
-    padding: 10px 14px;
-    border-radius: 50%;
-    font-size: 18px;
-    transition: all 100ms ease-in-out;
-  }
-
-  footer .social-links a:hover {
-    color: var(--secondary-color);
-    background-color: var(--branding-color);
+    background-color: var(--primary-color);
   }
 
   .about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     padding: 120px 24px;
+    gap: 12px;
+  }
+
+  .social-links {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .social-links a:hover {
+    color: var(--secondary-color);
+    background-color: var(--branding-color);
+  }
+}
+
+@media (min-width: 768px) {
+  nav a {
+    color: var(--secondary-font-color);
+    text-align: center;
+    font-family: var(--third-font-family);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    text-decoration: none;
+  }
+
+  .collapse a {
+    padding: 10px 12px;
+    align-items: center;
+    gap: 10px;
+    color: var(--secondary-color);
+  }
+
+  .left-content {
+    width: 50%;
+  }
+
+  .left-content p {
+    left: auto;
+    width: 80%;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+  }
+
+  footer {
+    position: absolute;
+    left: -76px;
+    width: 20%;
+    margin-top: 48px;
+  }
+
+  .social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .about-me {
+    background-image: url(photos/Illustration-header.svg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    position: relative;
+    padding: 192px 143px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 24px;
   }
 }
