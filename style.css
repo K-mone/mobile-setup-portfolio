@@ -7,15 +7,12 @@
   --secondary-font-family: "Roboto", sans-serif;
 }
 
-body {
-  background: #1c1a19;
-}
-
 @media (min-width: 375px) {
   section {
     background-image: url(photos/background-illustration.svg);
     background-repeat: no-repeat;
     background-position: right bottom;
+    background-color: #1c1a19;
   }
 
   h1 {
@@ -103,5 +100,64 @@ body {
   .social-links a:hover {
     color: var(--secondary-color);
     background-color: var(--branding-color);
+  }
+}
+
+@media (min-width: 768px) {
+  nav a {
+    color: var(--secondary-font-color);
+    text-align: center;
+    font-family: var(--third-font-family);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    text-decoration: none;
+  }
+
+  .collapse a {
+    padding: 10px 12px;
+    align-items: center;
+    gap: 10px;
+    color: var(--secondary-color);
+  }
+
+  .left-content {
+    width: 50%;
+  }
+
+  .left-content p {
+    left: auto;
+    width: 80%;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+  }
+
+  footer {
+    position: absolute;
+    left: -76px;
+    width: 20%;
+    margin-top: 48px;
+  }
+
+  .social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .about-me {
+    background-image: url(photos/Illustration-header.svg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    position: relative;
+    padding: 192px 143px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 24px;
   }
 }
