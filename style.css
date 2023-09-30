@@ -319,13 +319,6 @@
     gap: 10px;
   }
 
-  .about-me {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: left;
-    gap: 24px;
-  }
-
   .left-content {
     width: 50%;
   }
@@ -353,10 +346,11 @@
     background-image: url(photos/Illustration-header.svg);
     background-repeat: no-repeat;
     background-position: right bottom;
-    display: flex;
     position: relative;
     padding: 192px 143px;
+    display: flex;
     flex-direction: column;
+    align-items: left;
     gap: 24px;
   }
 
