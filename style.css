@@ -10,16 +10,14 @@
 }
 
 @media (min-width: 375px) {
-  p {
-    color: #091e42;
-    font-family: var(--third-font-family);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
+  section {
+    background-image: url(photos/background-illustration.svg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-color: #1c1a19;
   }
-
-  .about-me {
+  
+    .about-me {
     display: flex;
     padding: 120px 24px;
     flex-direction: column;
@@ -27,7 +25,7 @@
     gap: 12px;
     background: var(--default-background-color);
   }
-
+ 
   .about-me h1 {
     color: var(--default-font-color);
     font-family: var(--primary-font-family);
@@ -330,6 +328,7 @@
     padding: 10px 12px;
     align-items: center;
     gap: 10px;
+    color: var(--secondary-color);
   }
 
   .left-content {
@@ -359,6 +358,22 @@
     flex-direction: column;
   }
 
+  .social-links a {
+    color: var(--primary-color);
+    transition: all 100ms ease-in-out;
+    padding: 8px;
+  }
+
+  nav a:hover {
+    color: var(--branding-color);
+    background-color: var(--primary-color);
+  }
+
+  .social-links a:hover {
+    color: var(--secondary-color);
+    background-color: var(--branding-color);
+  }
+  
   .about-me {
     background-image: url(photos/Illustration-header.svg);
     background-repeat: no-repeat;
