@@ -1,10 +1,12 @@
 :root {
-  --branding-color: #ff6b00;
-  --primary-color: #fff5e1;
-  --secondary-color: #fff;
-  --heading-font-family: "Crete Round", serif;
+  --default-background-color: #1c1a19;
+  --default-font-color: #ff6b00;
+  --primary-font-color: #fff5e1;
+  --secondary-font-color: #fff;
   --default-font-family: "Poppins", sans-serif;
+  --primary-font-family: "Crete Round", serif;
   --secondary-font-family: "Roboto", sans-serif;
+  --third-font-family: "Inter", sans-serif;
 }
 
 @media (min-width: 375px) {
@@ -15,97 +17,331 @@
     background-color: #1c1a19;
   }
 
-  h1 {
-    color: var(--branding-color);
-    font-family: var(--heading-font-family);
+  .about-me {
+    display: flex;
+    padding: 120px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    background: var(--default-background-color);
+  }
+
+  .about-me h1 {
+    color: var(--default-font-color);
+    font-family: var(--primary-font-family);
     font-size: 56px;
+    font-style: normal;
     font-weight: 400;
     line-height: 64px;
     letter-spacing: 0.37px;
   }
 
-  h3 {
-    color: var(--primary-color);
+  .about-me h3 {
+    color: var(--primary-font-color);
+    font-family: var(--secondary-font-family);
     font-size: 24px;
+    font-style: normal;
     font-weight: 700;
     line-height: 32px;
-    font-family: var(--secondary-font-family);
   }
 
-  p {
-    color: var(--secondary-color);
+  .about-me p {
+    color: var(--secondary-font-color);
     font-family: var(--default-font-family);
     font-size: 16px;
+    font-style: normal;
     font-weight: 400;
     line-height: 24px;
     margin-bottom: 0;
   }
 
-  nav {
-    height: 48px;
-    padding: 2px 24px 2px 12px;
-  }
-
-  nav ul {
-    margin: 0;
-    padding: 0;
-  }
-
-  nav li {
-    list-style: none;
-    line-height: 42px;
-    margin-left: 15px;
-  }
-
-  .navbar-brand {
-    color: var(--secondary-color);
-    text-align: center;
-    font-family: var(--secondary-font-family);
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 24px;
-  }
-
-  nav a {
-    text-decoration: none;
-    color: var(--primary-color);
-    transition: all 100ms ease-in-out;
-  }
-
-  .social-links a {
-    color: var(--primary-color);
-    transition: all 100ms ease-in-out;
-    padding: 8px;
-  }
-
-  nav a:hover {
-    color: var(--branding-color);
-    background-color: var(--primary-color);
-  }
-
-  .about-me {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 120px 24px;
-    gap: 12px;
-  }
-
   .social-links {
     display: flex;
     align-items: flex-start;
+    padding: 8px;
+  }
+
+  .social-links a {
+    color: #dbd8d7;
+    width: 28px;
+    height: 28px;
   }
 
   .social-links a:hover {
-    color: var(--secondary-color);
-    background-color: var(--branding-color);
+    color: var(--default-font-color);
+    transition: 150ms ease-in-out;
+    cursor: pointer;
+  }
+
+  .grid-container {
+    display: grid;
+    padding: 120px 0;
+    align-items: center;
+    gap: 80px;
+  }
+
+  header {
+    color: var(--default-background-color);
+    font-family: var(--primary-font-family);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .feature {
+    display: flex;
+    padding: 12px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .work-story {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  button {
+    display: flex;
+    padding: 12px;
+    border: none;
+    align-items: center;
+    gap: 10px;
+    background: var(--default-font-color);
+    color: var(--secondary-font-color);
+    text-align: center;
+    font-family: var(--third-font-family);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.51px;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  .card button {
+    display: inline-flex;
+    padding: 12px;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .work-story button {
+    cursor: pointer;
+    transition: 150ms ease-in-out;
+  }
+
+  .work-story button:hover {
+    background: #dbd8d7;
+    color: #ff6b00;
+  }
+
+  .img {
+    width: 100%;
+    height: 100%;
+  }
+
+  h4 {
+    color: #091e42;
+    font-family: var(--primary-font-family);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 44px;
+  }
+
+  .tags ul {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .tags li {
+    color: #091e42;
+    font-family: var(--third-font-family);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    border: 1px solid #8993a4;
+    background: var(--secondary-font-color);
+    display: flex;
+    padding: 10px 12px;
+    align-items: flex-start;
+  }
+
+  .card-wrapper {
+    display: flex;
+    padding: 0 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .card-divider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .ability ul {
+    color: var(--secondary-font-color);
+    text-align: center;
+    font-family: var(--third-font-family);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42.667px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .ability li {
+    list-style: none;
+  }
+
+  .card {
+    border: none;
+    display: inline-flex;
+    padding: 8px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    background-image: url("photos/background.png");
+    background-repeat: no-repeat;
+  }
+
+  .card h4 {
+    width: 295px;
+    height: 81px;
+    color: #fff;
+    font-family: var(--primary-font-family);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 44px;
+  }
+
+  .card p {
+    color: var(--secondary-font-color);
+    font-family: var(--third-font-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    width: 301px;
+    height: 99px;
+  }
+
+  .card .tags ul {
+    padding: 0;
+  }
+
+  .card .tags li {
+    background: rgba(255, 255, 255, 0.24);
+    color: var(--secondary-font-color);
+    font-family: var(--third-font-family);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  .action {
+    width: 100%;
+    height: 48px;
+    background: var(--default-font-color);
+  }
+
+  .full-button:hover {
+    cursor: pointer;
+    background-color: #f4f5f7;
+    color: #ff6b00;
+    transition: 150ms ease-in-out;
+  }
+
+  .about-myself {
+    display: flex;
+    padding: 120px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    background-color: var(--default-background-color);
+    background-image: url(photos/illustration-about-myself-mobile.svg);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: 20%;
+  }
+
+  .left-content {
+    margin-bottom: 100px;
+  }
+
+  .left-content img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+  }
+
+  .about-myself h1 {
+    color: var(--default-font-color);
+    font-family: var(--primary-font-family);
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 88px;
+    letter-spacing: 0.37px;
+  }
+
+  .about-myself p {
+    color: #f4f5f7;
+    font-family: var(--third-font-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .skills {
+    display: flex;
+    font-family: var(--third-font-family);
+    padding: 120px 24px 38px 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .ability h4 {
+    text-align: center;
+    color: var(--secondary-font-color);
+    font-family: var(--default-font-family);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 44px;
   }
 }
 
 @media (min-width: 768px) {
   nav a {
-    color: var(--secondary-font-color);
+    color: var(--primary-font-color);
     text-align: center;
     font-family: var(--third-font-family);
     font-size: 15px;
@@ -119,7 +355,7 @@
     padding: 10px 12px;
     align-items: center;
     gap: 10px;
-    color: var(--secondary-color);
+    color: var(--secondary-font-color);
   }
 
   .left-content {
@@ -143,10 +379,22 @@
   }
 
   .social-links {
+    color: var(--primary-font-color);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 8px;
+  }
+
+  nav a:hover {
+    color: var(--default-font-color);
+    background-color: var(--primary-color);
+  }
+
+  .social-links a:hover {
+    color: var(--secondary-color);
+    background-color: var(--branding-color);
   }
 
   .about-me {
@@ -159,5 +407,161 @@
     flex-direction: column;
     align-items: left;
     gap: 24px;
+  }
+
+  .grid-container {
+    display: grid;
+    padding: 130px 118px;
+    flex-direction: column;
+    align-items: center;
+    gap: 114px;
+  }
+
+  .feature {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: left;
+    gap: 24px;
+    width: 75%;
+  }
+
+  .work-story {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+    gap: 24px;
+  }
+
+  .tags ul {
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    padding: 0;
+    gap: 12px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .card-divider {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0%;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .card {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .card .tags li {
+    background: rgba(255, 255, 255, 0.24);
+    color: var(--secondary-font-color);
+    font-family: var(--third-font-family);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  button {
+    display: flex;
+    padding: 12px;
+    border: none;
+    align-items: center;
+    gap: 10px;
+    background: var(--default-font-color);
+    color: var(--secondary-font-color);
+    text-align: center;
+    font-family: var(--third-font-family);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.51px;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  .card button {
+    display: inline-flex;
+    padding: 12px;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .work-story button {
+    cursor: pointer;
+    transition: 150ms ease-in-out;
+  }
+
+  .work-story button:hover {
+    background: #dbd8d7;
+    color: #ff6b00;
+    cursor: pointer;
+  }
+
+  .about-myself {
+    background-image: url(photos/illustration-about-myself.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    display: flex;
+    position: relative;
+    padding: 130px 142px;
+    flex-direction: column;
+    align-items: left;
+    gap: 24px;
+  }
+
+  .left-content img {
+    position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skills {
+    display: inline-flex;
+    font-family: var(--third-font-family);
+    padding: 130px 0;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 152px;
+  }
+
+  .ability {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .ability ul {
+    display: flex;
+    padding: 0 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
 }
