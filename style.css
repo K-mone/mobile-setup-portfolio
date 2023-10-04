@@ -17,6 +17,30 @@
     background-color: #1c1a19;
   }
 
+  form {
+    display: flex;
+    padding: 120px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 58px;
+  }
+
+  form h3 {
+    display: flex;
+    padding-left: 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    color: #172b4d;
+    text-align: center;
+    font-family: var(--third-font-family);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 44px;
+    margin: 0;
+  }
+
   .about-me {
     display: flex;
     padding: 120px 24px;
@@ -55,6 +79,20 @@
     margin-bottom: 0;
   }
 
+  footer {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0;
+    gap: 15px;
+  }
+
+  footer a {
+    padding: 8px;
+    width: 34px;
+    height: 34px;
+    color: #505f79;
+  }
+
   .social-links {
     display: flex;
     align-items: flex-start;
@@ -67,10 +105,76 @@
     height: 28px;
   }
 
+  footer a:hover {
+    background-color: #505f79;
+    color: #f4f5f7;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
   .social-links a:hover {
     color: var(--default-font-color);
     transition: 150ms ease-in-out;
     cursor: pointer;
+  }
+
+  button {
+    display: flex;
+    padding: 12px;
+    border: none;
+    align-items: center;
+    gap: 10px;
+    background: var(--default-font-color);
+    color: var(--secondary-font-color);
+    text-align: center;
+    font-family: var(--third-font-family);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.51px;
+  }
+
+  form button {
+    display: flex;
+    padding: 12px;
+    align-items: center;
+    gap: 10px;
+    color: var(--secondary-font-color);
+    text-align: center;
+    font-family: var(--third-font-family);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.51px;
+    background: var(--default-font-color);
+    cursor: pointer;
+    transition: 150ms all ease-in-out;
+  }
+
+  .work-story button {
+    cursor: pointer;
+    transition: 150ms ease-in-out;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  .card button {
+    display: inline-flex;
+    padding: 12px;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  form button:hover {
+    background-color: var(--secondary-font-color);
+    border: 1px solid var(--default-font-color);
+    color: var(--default-font-color);
   }
 
   .grid-container {
@@ -106,41 +210,6 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
-  }
-
-  button {
-    display: flex;
-    padding: 12px;
-    border: none;
-    align-items: center;
-    gap: 10px;
-    background: var(--default-font-color);
-    color: var(--secondary-font-color);
-    text-align: center;
-    font-family: var(--third-font-family);
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: 0.51px;
-  }
-
-  button:hover {
-    cursor: pointer;
-  }
-
-  .card button {
-    display: inline-flex;
-    padding: 12px;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-    justify-content: center;
-  }
-
-  .work-story button {
-    cursor: pointer;
-    transition: 150ms ease-in-out;
   }
 
   .work-story button:hover {
@@ -338,30 +407,6 @@
     line-height: 44px;
   }
 
-  form {
-    display: flex;
-    padding: 120px 24px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 58px;
-  }
-
-  form h3 {
-    display: flex;
-    padding-left: 24px;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    color: #172b4d;
-    text-align: center;
-    font-family: var(--third-font-family);
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 44px;
-    margin: 0;
-  }
-
   fieldset {
     border: none;
     display: flex;
@@ -406,53 +451,8 @@
     padding: 10px;
   }
 
-  form button {
-    display: flex;
-    padding: 12px;
-    align-items: center;
-    gap: 10px;
-    color: var(--secondary-font-color);
-    text-align: center;
-    font-family: var(--third-font-family);
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: 0.51px;
-    background: var(--default-font-color);
-    cursor: pointer;
-    transition: 150ms all ease-in-out;
-  }
-
-  form button:hover {
-    background-color: var(--secondary-font-color);
-    border: 1px solid var(--default-font-color);
-    color: var(--default-font-color);
-  }
-
   form .desktop-version {
     display: none;
-  }
-
-  footer {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 0;
-    gap: 15px;
-  }
-
-  footer a {
-    padding: 8px;
-    width: 34px;
-    height: 34px;
-    color: #505f79;
-  }
-
-  footer a:hover {
-    background-color: #505f79;
-    color: #f4f5f7;
-    cursor: pointer;
-    border-radius: 50%;
   }
 
   .bottom-line img {
