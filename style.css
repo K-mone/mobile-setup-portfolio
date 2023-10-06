@@ -9,6 +9,65 @@
   --third-font-family: "Inter", sans-serif;
 }
 
+.logo:hover {
+  animation-duration: 3s;
+  animation-name: rotate;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(180deg);
+    transition: ease-in-out 1s;
+    color: var(--default-font-color);
+    font-size: 300%;
+  }
+
+  to {
+    transform: rotate(360deg);
+    transition: ease-in-out 1s;
+    color: var(--default-font-color);
+    font-size: 200%;
+  }
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #f4f5f7;
+  color: #ff6b00;
+  transform: scale(1.5);
+  transition: all 1s ease-in-out;
+}
+
+a:hover {
+  color: var(--default-font-color);
+  background-color: var(--primary-color);
+  transition: all 150ms ease-in-out;
+  cursor: pointer;
+}
+
+.social-links a:hover {
+  cursor: pointer;
+  animation: 3s larger 1 ease-in-out forwards;
+}
+
+@keyframes larger {
+  from {
+    transform: scale(1.5);
+    color: var(--default-font-color);
+  }
+
+  to {
+    transform: scale(1.5);
+    color: var(--default-font-color);
+  }
+}
+
+.feature img:hover {
+  transform: scale(1.5);
+}
+
 @media (min-width: 375px) {
   section {
     background-image: url(photos/background-illustration.svg);
@@ -65,12 +124,6 @@
     color: #dbd8d7;
     width: 28px;
     height: 28px;
-  }
-
-  .social-links a:hover {
-    color: var(--default-font-color);
-    transition: 150ms ease-in-out;
-    cursor: pointer;
   }
 
   .grid-container {
@@ -390,11 +443,6 @@
   nav a:hover {
     color: var(--default-font-color);
     background-color: var(--primary-color);
-  }
-
-  .social-links a:hover {
-    color: var(--secondary-color);
-    background-color: var(--branding-color);
   }
 
   .about-me {
