@@ -39,7 +39,7 @@ form h3:hover {
 
 @keyframes movetext {
   from {
-    transform: translateX(0px);
+    transform: translateX(5px);
     transition: linear 1s;
   }
 
@@ -63,8 +63,8 @@ a:hover {
   cursor: pointer;
 }
 
-.social-links a:hover,
-footer a:hover {
+footer a:hover,
+.social-links a:hover {
   cursor: pointer;
   animation: 3s larger 1 ease-in-out forwards;
 }
