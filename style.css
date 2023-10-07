@@ -14,6 +14,11 @@
   animation-name: rotate;
   animation-iteration-count: 1;
   animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+
+form h3:hover {
+  animation: movetext 4s forwards;
 }
 
 @keyframes rotate {
@@ -32,6 +37,19 @@
   }
 }
 
+@keyframes movetext {
+  from {
+    transform: translateX(0px);
+    transition: linear 1s;
+  }
+
+  to {
+    transform: translateX(100px);
+    transition: all 300ms linear;
+    animation: 3s 1 forwards;
+  }
+}
+
 button:hover {
   cursor: pointer;
   background-color: #f4f5f7;
@@ -41,13 +59,12 @@ button:hover {
 }
 
 a:hover {
-  color: var(--default-font-color);
-  background-color: var(--primary-color);
   transition: all 150ms ease-in-out;
   cursor: pointer;
 }
 
-.social-links a:hover {
+.social-links a:hover,
+footer a:hover {
   cursor: pointer;
   animation: 3s larger 1 ease-in-out forwards;
 }
@@ -66,6 +83,7 @@ a:hover {
 
 .feature img:hover {
   transform: scale(1.5);
+  transition: all 1s linear;
 }
 
 @media (min-width: 375px) {
@@ -164,13 +182,6 @@ a:hover {
     height: 28px;
   }
 
-  footer a:hover {
-    background-color: #505f79;
-    color: #f4f5f7;
-    cursor: pointer;
-    border-radius: 50%;
-  }
-
   button {
     display: flex;
     padding: 12px;
@@ -211,10 +222,6 @@ a:hover {
     transition: 150ms ease-in-out;
   }
 
-  button:hover {
-    cursor: pointer;
-  }
-
   .card button {
     display: inline-flex;
     padding: 12px;
@@ -222,12 +229,6 @@ a:hover {
     gap: 10px;
     width: 100%;
     justify-content: center;
-  }
-
-  form button:hover {
-    background-color: var(--secondary-font-color);
-    border: 1px solid var(--default-font-color);
-    color: var(--default-font-color);
   }
 
   .grid-container {
@@ -263,11 +264,6 @@ a:hover {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
-  }
-
-  .work-story button:hover {
-    background: #dbd8d7;
-    color: #ff6b00;
   }
 
   .img {
@@ -667,9 +663,6 @@ a:hover {
     font-weight: 700;
     line-height: 24px;
     letter-spacing: 0.51px;
-  }
-
-  button:hover {
     cursor: pointer;
   }
 
