@@ -1,7 +1,7 @@
 {
   "name": "mobile-setup-portfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "Welcome to my portfolio! I'm Kyae Mone Win, a front-end developer based in Myanmar. Here, you'll find a collection of my projects and skills.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
