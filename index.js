@@ -120,7 +120,7 @@ function createDiv(buttonId) {
   div.classList.toggle("popup");
 
   if (window.innerWidth < 900) {
-    div.classList.add("display", "flex");
+    div.style.display = "flex";
     div.classList.toggle("mobile-width");
     projectsTitle.classList.toggle("mobile-title");
     projectsLanguages.classList.toggle("mobile-languages");
