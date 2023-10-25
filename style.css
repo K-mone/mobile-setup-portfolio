@@ -420,6 +420,10 @@ footer a:hover,
     gap: 24px;
   }
 
+  .card .card-content {
+    padding-top: 4rem;
+  }
+
   .ability ul {
     color: var(--secondary-font-color);
     text-align: center;
