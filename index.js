@@ -12,3 +12,18 @@ document.querySelectorAll(".nav-link").forEach((n) =>
     navMenu.classList.remove("active");
   })
 );
+
+const form = document.getElementById("contact-form");
+const email = document.getElementById("email");
+const errorMessage = document.getElementById("error");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  if (email.value !== email.value.toLowerCase()) {
+    errorMessage.innerText = "The email address has to be in lower case";
+    errorMessage.style.color = "red";
+  } else {
+    form.submit();
+    errorMessage.style.display = "none";
+  }
+});
