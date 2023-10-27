@@ -27,3 +27,31 @@ form.addEventListener("submit", (event) => {
     errorMessage.style.display = "none";
   }
 });
+
+/* Local storage */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const myStorage = {
+    name: "",
+    email: "",
+    message: "",
+  };
+
+  const form = document.getElementById("contact-form");
+
+  form.addEventListener("change", () => {
+    myStorage.name = document.getElementById("name").value;
+    myStorage.email = document.getElementById("email").value;
+    myStorage.message = document.getElementById("message").value;
+    localStorage.setItem("storageInfo", JSON.stringify(myStorage));
+  });
+
+  const storageData = localStorage.getItem("storageInfo");
+  if (storageData) {
+    const storageObject = JSON.parse(storageData);
+
+    document.getElementById("name").value = storageObject.name;
+    document.getElementById("email").value = storageObject.email;
+    document.getElementById("message").value = storageObject.message;
+  }
+});
