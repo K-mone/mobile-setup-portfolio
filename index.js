@@ -11,6 +11,7 @@ document.querySelectorAll(".nav-link").forEach((n) =>
     navMenu.classList.remove("active");
   })
 );
+
 // details popup window
 
 const projects = [
@@ -125,3 +126,46 @@ close.onclick = () => {
   document.body.style.background = "#fff";
   blurProjects.forEach((project) => project.classList.toggle("blur"));
 };
+
+const form = document.getElementById("contact-form");
+const email = document.getElementById("email");
+const errorMessage = document.getElementById("error");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  if (email.value !== email.value.toLowerCase()) {
+    errorMessage.innerText = "The email address has to be in lower case";
+    errorMessage.style.color = "red";
+  } else {
+    form.submit();
+    errorMessage.style.display = "none";
+  }
+});
+
+/* Local storage */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const myStorage = {
+    name: "",
+    email: "",
+    message: "",
+  };
+
+  const form = document.getElementById("contact-form");
+
+  form.addEventListener("change", () => {
+    myStorage.name = document.getElementById("name").value;
+    myStorage.email = document.getElementById("email").value;
+    myStorage.message = document.getElementById("message").value;
+    localStorage.setItem("storageInfo", JSON.stringify(myStorage));
+  });
+
+  const storageData = localStorage.getItem("storageInfo");
+  if (storageData) {
+    const storageObject = JSON.parse(storageData);
+
+    document.getElementById("name").value = storageObject.name;
+    document.getElementById("email").value = storageObject.email;
+    document.getElementById("message").value = storageObject.message;
+  }
+});
