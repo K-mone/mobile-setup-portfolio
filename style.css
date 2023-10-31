@@ -22,6 +22,10 @@ a {
   text-decoration: none;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .nav-branding {
   color: var(--secondary-font-color);
   text-align: center;
@@ -159,11 +163,173 @@ form h3:hover {
   }
 }
 
+/* popup section */
+.popup {
+  display: none;
+  width: 85vw;
+  height: 92vh;
+  padding: 1.8rem 1.2rem 1rem 1.2rem;
+  background-color: #f3f1f1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+}
+
+.blur {
+  filter: blur(20px);
+}
+
+.project-title {
+  color: #172b4d;
+  display: inline;
+  font-family: var(--primary-font-family);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 44px;
+}
+
+.project-languages {
+  margin: 1rem 0 1.3rem 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.project-languages > li {
+  color: #3c3a39;
+  display: flex;
+  flex-direction: row;
+  font-family: var(--default-font-family);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  border: 1px solid rgb(143, 142, 142);
+  padding: 10px 12px;
+  gap: 2rem;
+}
+
+.project-paragraph {
+  color: #344563;
+  font-family: var(--third-font-family);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  display: block;
+  float: right;
+  width: 38%;
+}
+
+.project-button {
+  position: absolute;
+  top: 85%;
+  left: 62%;
+}
+
+.project-button a {
+  background-color: var(--default-font-color);
+  font-family: var(--default-font-family);
+  font-weight: 700;
+  color: var(--secondary-font-color);
+  border: none;
+  font-size: 1.1rem;
+  padding: 0.7rem;
+  margin-right: 1rem;
+  margin-bottom: 0;
+}
+
+.popup-exit {
+  position: absolute;
+  top: 6%;
+  right: 5%;
+  background-color: #f3f1f1;
+}
+
+.popup-exit:hover {
+  background-color: #f3f1f1;
+}
+
+.popup-img {
+  display: block;
+  float: left;
+  margin-right: 1rem;
+  width: 60%;
+  height: 75%;
+  max-height: 600px;
+  object-fit: cover;
+  border: thin solid rgb(196, 195, 195);
+}
+
+@media (max-width: 768px) {
+  .popup {
+    display: none;
+    width: 92vw;
+    height: 128vh;
+    top: 17%;
+    left: 13%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 1.2rem;
+    background-color: #f3f1f1;
+    position: fixed;
+    z-index: 99;
+    object-fit: cover;
+  }
+
+  .popup-img {
+    width: 100%;
+    height: 28%;
+    object-fit: cover;
+    object-position: unset;
+  }
+
+  .project-paragraph {
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.4;
+    margin-top: 1rem;
+  }
+
+  .project-button {
+    top: 94%;
+    left: 5%;
+  }
+
+  .project-title {
+    color: #172b4d;
+    display: block;
+    font-family: var(--secondary-font-family);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .project-languages {
+    margin: 1rem 0;
+  }
+
+  .project-languages > li {
+    color: #3c3a39;
+    font-family: var(--default-font-family);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    list-style: none;
+    padding: 10px 12px;
+  }
+}
+
 button:hover {
   cursor: pointer;
   background-color: #f4f5f7;
   color: #ff6b00;
-  transform: scale(1.5);
   transition: all 1s ease-in-out;
 }
 
@@ -171,6 +337,13 @@ footer a:hover,
 .social-links a:hover {
   cursor: pointer;
   animation: 3s larger 1 ease-in-out forwards;
+}
+
+.project-button a:hover {
+  outline: thin solid #fc6703;
+  background-color: #fff5e1;
+  cursor: pointer;
+  color: #fc6703;
 }
 
 .social-links a:hover {
@@ -192,19 +365,7 @@ footer a:hover,
   }
 }
 
-.feature img:hover {
-  transform: scale(1.5);
-  transition: all 1s linear;
-}
-
 @media (min-width: 375px) {
-  section {
-    background-image: url(photos/background-illustration.svg);
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-color: #1c1a19;
-  }
-
   form {
     display: flex;
     padding: 120px 24px;
@@ -343,13 +504,14 @@ footer a:hover,
   }
 
   .grid-container {
-    display: grid;
-    padding: 120px 0;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 24px;
     align-items: center;
-    gap: 80px;
+    gap: 114px;
   }
 
-  .grid-container header {
+  .grid-container h2 {
     color: var(--default-background-color);
     font-family: var(--primary-font-family);
     font-size: 40px;
@@ -358,13 +520,15 @@ footer a:hover,
     line-height: 52px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: left;
+    padding-bottom: 10px;
+    align-items: flex-start;
     gap: 24px;
   }
 
   .feature {
     display: flex;
-    padding: 12px;
+    padding-top: 110px;
     flex-direction: column;
     align-items: center;
     gap: 24px;
@@ -427,6 +591,10 @@ footer a:hover,
     gap: 24px;
   }
 
+  .card .card-content {
+    padding-top: 4rem;
+  }
+
   .ability ul {
     color: var(--secondary-font-color);
     text-align: center;
@@ -454,6 +622,8 @@ footer a:hover,
     gap: 0;
     background-image: url("photos/background.png");
     background-repeat: no-repeat;
+    width: 100%;
+    height: 435px;
   }
 
   .card h4 {
@@ -642,6 +812,14 @@ footer a:hover,
     width: 50%;
   }
 
+  .left-content h1 {
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 81.5px;
+    padding-bottom: 24px;
+  }
+
   .left-content p {
     left: auto;
     width: 80%;
@@ -676,16 +854,16 @@ footer a:hover,
     background-image: url(photos/Illustration-header.svg);
     background-repeat: no-repeat;
     background-position: right bottom;
-    position: relative;
     padding: 192px 143px;
     display: flex;
     flex-direction: column;
     align-items: left;
+    position: relative;
     gap: 24px;
   }
 
   .grid-container {
-    display: grid;
+    display: flex;
     margin: 0 auto;
     padding: 130px 118px;
     flex-direction: column;
@@ -731,6 +909,8 @@ footer a:hover,
     justify-content: center;
     align-items: center;
     gap: 24px;
+    margin: 0 auto;
+    padding: 0;
   }
 
   .card-divider {
@@ -747,6 +927,12 @@ footer a:hover,
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    width: 100%;
+    height: 435px;
+  }
+
+  .card .card-content {
+    padding-top: 4rem;
   }
 
   .card .tags li {
