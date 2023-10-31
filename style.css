@@ -268,11 +268,11 @@ form h3:hover {
   .popup {
     display: none;
     width: 92vw;
-    height: 106vh;
-    top: 18%;
+    height: 128vh;
+    top: 17%;
     left: 13%;
     transform: translate(-50%, -50%);
-    padding: 1.8rem 1.2rem 1rem 1.2rem;
+    padding: 1rem 1.2rem;
     background-color: #f3f1f1;
     position: fixed;
     z-index: 99;
@@ -294,7 +294,7 @@ form h3:hover {
   }
 
   .project-button {
-    top: 92%;
+    top: 94%;
     left: 5%;
   }
 
@@ -305,7 +305,7 @@ form h3:hover {
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
-    line-height: 44px;
+    line-height: 40px;
     margin-bottom: 0;
     text-align: left;
   }
